@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
+  <title>Worldpay Translucent Payments</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+        height: 10vh;
+        background-color: white;
+        z-index: 1000;
+    }
+
+    section {
+        position: relative;
+        top: 10vh;
+        margin: 0px auto;
+        height: 90vh;
+        max-width: 500px;
+    }
+
+    section .content { max-height: 50vh; }
+
+    section footer {
+        /* position: absolute;
+        top: 40vh; */
+        height: 10vh;
+        margin: 0 auto;
+    }
+    form section {
+        margin-top: 10vh;
+    }
+</style>
+
+<!-- Hackathon Modal -->
+<div class="modal fade" id="hackathonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Hackathon</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        blah blah
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Recruitment Modal -->
+<div class="modal fade" id="recruitmentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Recruitment</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        yada yada 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tocs -->
+<div class="modal fade" id="tocsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Terms &amp; Conditions</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        kjsg
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--- fixed at top -->
+<header>
+    <!--- logo -->
+    <h1>WP</h1>
+</header>
+
+<!--- info text -->
+<section>
+    <div class="content">
+        <h1>Title</h1>
+        <p>text</p>
+        <footer>
+            <a class="btn" href="#personal_info">Next</a>
+            <p>1/3</p>
+            <a name="personal_info"></a>
+        </footer>
+    </div>
+</section>
+
+<form action="" method="post">
+<!---  personal details -->
+<section><a name="personal_info"></a>
+
+    <div class="content">
+        <h1>Title</h1>
+        <label for="name">Name: </label><br/>
+        <input id="name" type="text" name="name"><br/>
+        <label for="email">Email: </label><br/>
+        <input id="email" type="email" name="email"><br/>
+        <label for="occupation">Occupation: </label><br/>
+        <input id="occupation" type="text" name="occupation"><br/>
+        <p>Interested in: <br/></p>
+        <input id="hackathon_interest" type="checkbox" name="hackathon_interest">
+        <label for="hackathon_interest"><a data-toggle="modal" data-target="#hackathonModal">Hackathon</a></label><br/>
+        <input id="recruitment_interest" type="checkbox" name="recruitment_interest">
+        <label for="recruitment_interest"><a data-toggle="modal" data-target="#recruitmentModal">Recruitment</a></label><br/>
+        <footer>
+            <a href="#upload" class="btn btn-primary">Next</a>
+            <p>2/3</p>
+            <a name="upload"></a>
+        </footer>
+    </div>
+</section>
+
+<!---  upload -->
+<section>
+
+    <div class="content">
+        <h1>Title</h1>
+        <p>Text</p>
+        <label for="selfie_vid">Upload: </label>
+        <input id="selfie_vid" type="file" accept="video/*;capture=camcorder" name="your_name"><br/>
+        <input id="tocs" type="checkbox" name="tocs"><br/>
+        <label for="tocs">I have read and accept the <a data-toggle="modal" data-target="#tocsModal">Terms &amp; Conditions</a></label>
+        <footer>
+            <input type="submit" class="btn">
+            <p>3/3</p>
+        </footer>
+    </div>
+</section>
+
+</form>
+</body>
+
+</html>
